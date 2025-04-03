@@ -4,40 +4,27 @@ It is used to build and scale generative AI applications with foundation models 
 
 ### Test Amazon Titan-text-express Model (2*)
 
-AWS_REGION is set to 'eu-central-1'
+- AWS_REGION is set to 'eu-central-1'
 
-Run -> ```python bedrock_simple_demo.py```
+- python bedrock_simple_demo.py -> This Python script uses the Amazon Titan Text Express model via the Bedrock service to generate a text response (such as a list of 90s music bands in Germany) based on a user-provided prompt
 
-Response:
+- Run -> ```python bedrock_simple_demo.py```
+
+- Response:
 
 ```
 INFO:__main__:Generating text with Amazon &titan-text-express; model amazon.titan-text-express-v1
 INFO:botocore.credentials:Found credentials in environment variables.
 INFO:__main__:Successfully generated text with Amazon &titan-text-express; model amazon.titan-text-express-v1
-Input token count: 14
-Token count: 155
+Input token count: 19
+Token count: 53
 Output text: 
-Here is a list of 80's music bands in Germany:
-1. Nena
-2. Falco
-3. Modern Talking
-4. Alphaville
-5. Culture Beat
-6. Tocotronic
-7. Die Toten Hosen
-8. Ideal
-9. Extrabreit
-10. DAF
-11. Fun Factory
-12. La Düsseldorf
-13. Spider Murphy Gang
-14. Münchener Freiheit
-15. Joachim Witt
-16. Captain Jack
-17. Silbermond
-18. Die Fantastischen Vier
-19. Die Ärzte
-20. Trio
+Here are five unique German music bands active in the 1990s:
+1. The Notwist
+2. Die Fantastischen Vier
+3. Die Ärzte
+4. Rammstein
+5. Die Toten Hosen
 Completion reason: FINISH
 Finished generating text with the Amazon &titan-text-express; model amazon.titan-text-express-v1.
 ```
@@ -51,8 +38,17 @@ Response:
 ```
 Titan Text G1 - Express : amazon.titan-text-express-v1:0:8k
 Titan Text G1 - Express : amazon.titan-text-express-v1
+Titan Text G1 - Lite : amazon.titan-text-lite-v1:0:4k
+Titan Text G1 - Lite : amazon.titan-text-lite-v1
 Titan Embeddings G1 - Text : amazon.titan-embed-text-v1:2:8k
 Titan Embeddings G1 - Text : amazon.titan-embed-text-v1
+Titan Multimodal Embeddings G1 : amazon.titan-embed-image-v1:0
+Titan Multimodal Embeddings G1 : amazon.titan-embed-image-v1
+Titan Embeddings G2 - Text : amazon.titan-embed-text-v2:0
+Rerank 1.0 : amazon.rerank-v1:0
+Nova Pro : amazon.nova-pro-v1:0
+Nova Lite : amazon.nova-lite-v1:0
+Nova Micro : amazon.nova-micro-v1:0
 ```
 
 ### References

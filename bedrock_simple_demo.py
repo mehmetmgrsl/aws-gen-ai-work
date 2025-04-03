@@ -35,7 +35,8 @@ def generate_text(model_id, body):
     logger.info(
         "Generating text with Amazon &titan-text-express; model %s", model_id)
 
-    bedrock = boto3.client(service_name='bedrock-runtime')
+    bedrock = boto3.client("bedrock-runtime", region_name="eu-central-1")
+
 
     accept = "application/json"
     content_type = "application/json"
@@ -66,7 +67,8 @@ def main():
 
         model_id = 'amazon.titan-text-express-v1'
 
-        prompt = """Could you please list the 80's music bands in Germany?"""
+        prompt = """List 5 unique German music bands active in the 1990s, please?"""
+
 
         body = json.dumps({
             "inputText": prompt,
